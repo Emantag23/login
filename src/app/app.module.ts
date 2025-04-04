@@ -1,18 +1,11 @@
+import { LoginComponent } from './pages/login/login.component';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [],
+  imports: [AppComponent, LoginComponent],
+  // Removed AppComponent from bootstrap as it is a standalone component
 })
 export class AppModule { }

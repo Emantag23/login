@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Angular Auth</a>
+  
+      <!-- زر التبديل للشاشات الصغيرة -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li *ngIf="!user" class="nav-item">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+          </li>
+          <li *ngIf="user" class="nav-item">
+            <a class="nav-link" routerLink="/profile" routerLinkActive="active">Welcome, {{ user.name }}</a>
+          </li>
+        </ul>
+        <button *ngIf="user" class="btn btn-danger ms-3" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+  
